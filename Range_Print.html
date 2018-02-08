@@ -16,12 +16,14 @@
 
 			
 
-				// check if user only entered one number, the end number
+				// check if user only entered one number
+				// If they only entered one number, that becomes the end number.
 				if(typeof end === 'undefined') {
 					end = start;
 					start = 0;
 				}
 
+				// show what values were sent to the function
 				console.log("Start Number: " + start);
 				console.log("End Number: " + end);
 				console.log("Skip Number: " + skip);
