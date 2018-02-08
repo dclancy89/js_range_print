@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Range Print</title>
+	</head>
+	<body>
+		See console.
+
+		<script>
+			
+
+
+
+
+			function printRange(start, end, skip = 1) {
+
+			
+
+				// check if user only entered one number, the end number
+				if(typeof end === 'undefined') {
+					end = start;
+					start = 0;
+				}
+
+				console.log("Start Number: " + start);
+				console.log("End Number: " + end);
+				console.log("Skip Number: " + skip);
+				console.log("");
+
+				// check if start value is bigger than end value.
+				if(start > end) {
+					for(var i = start; i > end; i -= skip) {
+				   		console.log(i);
+					 }
+				} else {
+					for(var i = start; i < end; i += skip) {
+						console.log(i);
+					}
+				}
+
+
+			}
+
+
+
+			printRange(2, 10, 2);
+			console.log("");
+
+			printRange(-10,-5);
+			console.log("");
+
+			printRange(20,5,2);
+			console.log("");
+
+			printRange(4, 8);
+			console.log("");
+
+			printRange(4);
+			console.log("");
+
+
+
+		</script>
+	</body>
+</html>
